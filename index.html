@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thur Pod's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>Thur Pod's</h1>
+        <p>Bem-vindo à nossa loja!</p>
+    </header>
+
+    <h2 class="titulo-secao">Nossos Produtos</h2>
+
+    <div class="aviso-sabores">
+        <span class="aviso-icon">⚡</span>
+        <p><strong>ATENÇÃO:</strong> Todos os sabores são sujeitos à disponibilidade. Por favor, confirme os sabores disponíveis no WhatsApp no momento de finalizar o pedido.</p>
+    </div>
+
+    <main class="layout">
+        <aside class="carrinho-box">
+            <h2>Meu Carrinho</h2>
+            <div id="carrinho">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <p id="total">Total: R$ 0,00</p>
+            <button onclick="finalizarPedido()" class="finalizar-pedido">
+                Finalizar pedido pelo Whatsapp
+            </button>
+        </aside>
+
+        <section class="produtos">
+            <div class="produto">
+                <p class="nome">IGNITE V50</p>
+                <img src="imagens/v50.jpg" alt="IGNITE V50">
+                <p class="preco">R$ 69,99</p>
+                <button onclick="adicionarCarrinho('IGNITE V50', 69.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">IGNITE V155</p>
+                <img src="imagens/v155.jpg" alt="IGNITE V155">
+                <p class="preco">R$ 109,99</p>
+                <button onclick="adicionarCarrinho('IGNITE V155', 109.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">IGNITE V250</p>
+                <img src="imagens/v250.jpg" alt="IGNITE V250">
+                <p class="preco">R$ 119,99</p>
+                <button onclick="adicionarCarrinho('IGNITE V250', 119.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">IGNITE V300</p>
+                <img src="imagens/v300.jpg" alt="IGNITE V300">
+                <p class="preco">R$ 129,99</p>
+                <button onclick="adicionarCarrinho('IGNITE V300', 129.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">IGNITE V400</p>
+                <img src="imagens/v400.jpg" alt="IGNITE V400">
+                <p class="preco">R$ 139,99</p>
+                <button onclick="adicionarCarrinho('IGNITE V400', 139.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">ElfBar GH 23K</p>
+                <img src="imagens/elf23k.jpg" alt="ElfBar GH 23K">
+                <p class="preco">R$ 109,99</p>
+                <button onclick="adicionarCarrinho('ElfBar GH 23K', 109.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">ElfBar Ice King 40K</p>
+                <img src="imagens/elf40k.jpg" alt="ElfBar Ice King 40K">
+                <p class="preco">R$ 129,99</p>
+                <button onclick="adicionarCarrinho('ElfBar Ice King 40K', 129.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">ElfBar Trio 40K</p>
+                <img src="imagens/elftrio.jpg" alt="ElfBar Trio 40K">
+                <p class="preco">R$ 139,99</p>
+                <button onclick="adicionarCarrinho('ElfBar Trio 40k', 139.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">ElfBar TE 30K</p>
+                <img src="imagens/elf30k.jpg" alt="ElfBar TE 30K">
+                <p class="preco">R$ 119,99</p>
+                <button onclick="adicionarCarrinho('ElfBar TE 30K', 119.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">LostMary OS5000</p>
+                <img src="imagens/lostmary.jpg" alt="LostMary OS5000">
+                <p class="preco">R$ 69,99</p>
+                <button onclick="adicionarCarrinho('LostMary OS5000', 69.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">LostMary MO10000</p>
+                <img src="imagens/lost10k.jpg" alt="LostMary MO10000">
+                <p class="preco">R$ 89,99</p>
+                <button onclick="adicionarCarrinho('LostMary MO10000', 89.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">LostMary MT15000</p>
+                <img src="imagens/lost15k.jpg" alt="LostMary MT15000">
+                <p class="preco">R$ 99,99</p>
+                <button onclick="adicionarCarrinho('LostMary MT15000', 99.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">LostMary MT35000</p>
+                <img src="imagens/lost35k.jpg" alt="LostMary MT35000">
+                <p class="preco">R$ 129,99</p>
+                <button onclick="adicionarCarrinho('LostMary MT35000', 129.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">POD THC 1G</p>
+                <img src="imagens/thc.jpg" alt="POD THC 1G">
+                <p class="preco">R$ 209,99</p>
+                <button onclick="adicionarCarrinho('POD THC 1G', 209.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <p class="nome">TADALAFILA 1 CÁPSULA</p>
+                <img src="imagens/tadala.jpg" alt="TADALAFILA 1 CÁPSULA">
+                <p class="preco">R$ 15,99</p>
+                <button onclick="adicionarCarrinho('TADALAFILA 1 CÁPSULA', 15.99)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+<script>
+    let carrinho = [];
+   function adicionarCarrinho(nome, preco) {
+    let produto = carrinho.find(item => item.nome === nome);
+    if (produto) { produto.quantidade++; } else { carrinho.push({ nome: nome, preco: preco, quantidade: 1 }); }
+    atualizarCarrinho();
+}
+function removerCarrinho(indice) {
+    if (carrinho[indice].quantidade > 1) { carrinho[indice].quantidade--; } else { carrinho.splice(indice, 1); }
+    atualizarCarrinho();
+}
+function atualizarCarrinho() {
+    const areaCarrinho = document.getElementById("carrinho");
+    const totalElemento = document.getElementById("total");
+    areaCarrinho.innerHTML = "";
+    let total = 0;
+    if (carrinho.length === 0) { areaCarrinho.innerHTML = "<p>Seu carrinho está vazio.</p>"; }
+    carrinho.forEach(function(produto, indice) {
+        areaCarrinho.innerHTML += `<div class="item-carrinho"><span>${produto.nome} (x${produto.quantidade}) - R$ ${produto.preco.toFixed(2)}</span><button onclick="removerCarrinho(${indice})">X</button></div>`;
+        total += produto.preco * produto.quantidade;
+    });
+    totalElemento.textContent = "Total: R$ " + total.toFixed(2).replace(".", ",");
+}
+function finalizarPedido() {
+    if (carrinho.length === 0) { alert("Seu carrinho está vazio."); return; }
+    let mensagem = "Olá Thur Pod's! Quero fazer um pedido:\n\n";
+    let total = 0;
+    carrinho.forEach(function(produto) {
+        mensagem += `${produto.nome} - R$ ${produto.preco.toFixed(2)} (Qtd: ${produto.quantidade})\n`;
+        total += produto.preco * produto.quantidade;
+    });
+    mensagem += `\nTotal: R$ ${total.toFixed(2).replace(".", ",")}`;
+    mensagem += `\n\n_Por favor, me informe quais sabores estão disponíveis._`;
+    const numeroWhatsapp = "5511999677477";
+    const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+    window.open(urlWhatsapp, "_blank");
+}
+</script>
+</body>
+</html>

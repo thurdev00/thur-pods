@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #13131a;
+  --card: #1c1d27;
+  --border: #2a2c3a;
+  --text: #f2f2f5;
+  --muted: #8e91a8;
+  --neon: #00ff88;
+  --neon2: #00e5ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: 50px;
+}
+
+.topo { text-align: center; padding: 40px 20px 20px; }
+.topo h1 { font-size: 42px; font-weight: 800; letter-spacing: -1px; }
+.topo p { color: var(--muted); margin-top: 8px; }
+
+.titulo-secao {
+  text-align: center;
+  font-size: 28px;
+  margin: 30px 0 20px;
+  background: linear-gradient(90deg, var(--neon), var(--neon2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aviso-sabores {
+  max-width: 1350px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,229,255,0.08));
+  border: 1px solid rgba(0,255,136,0.25);
+  border-left: 4px solid var(--neon);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.aviso-sabores p {
+  font-size: 13.5px;
+  color: #d1d2de;
+  line-height: 1.4;
+}
+.aviso-sabores strong { color: var(--neon); }
+.aviso-icon {
+  font-size: 20px;
+  background: var(--neon);
+  color: #000;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: start;
+}
+
+.carrinho-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  position: sticky;
+  top: 20px;
+}
+.carrinho-box h2 { font-size: 18px; margin-bottom: 16px; }
+#carrinho p { color: var(--muted); font-size: 14px; }
+#total {
+  margin: 18px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neon);
+  text-align: right;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #252636;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.item-carrinho button {
+  background: #ff3b5c;
+  border: none;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.finalizar-pedido {
+  width: 100%;
+  padding: 14px!important;
+  background: linear-gradient(135deg, var(--neon), var(--neon2))!important;
+  color: #000!important;
+  border: none!important;
+  border-radius: 12px!important;
+  font-weight: 800!important;
+  font-size: 14px!important;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.finalizar-pedido:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,255,136,0.25); }
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.produto {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.2s;
+}
+.produto:hover { transform: translateY(-5px); border-color: #3b3e56; }
+.produto img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+.produto.nome {
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  min-height: 32px;
+}
+.produto.preco {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 8px 0 14px;
+}
+.produto button {
+  margin-top: auto;
+  background: #2a2c3d;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 11px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.produto button:hover { background: var(--text); color: var(--bg); }
+
+@media (max-width: 900px) {
+.layout { grid-template-columns: 1fr; }
+.carrinho-box { position: static; order: -1; }
+}
